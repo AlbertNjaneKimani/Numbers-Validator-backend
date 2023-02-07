@@ -47,7 +47,7 @@ public class CustomerService {
         return dto;
     }
 
-    private String extractCountryCode(String phone) {
+    public String extractCountryCode(String phone) {
         // Extract country code from the phone number
         String countryCode = "";
         Pattern pattern = Pattern.compile("^\\(\\d{3}\\)");
@@ -59,7 +59,7 @@ public class CustomerService {
         return countryCode;
     }
 
-    private String getCountryByCountryCode(String countryCode) {
+    public String getCountryByCountryCode(String countryCode) {
         // Map country code to country name
         Map<String, String> countryCodeMap = new HashMap<>();
         countryCodeMap.put(CAMEROON_CODE, "Cameroon");
@@ -71,7 +71,7 @@ public class CustomerService {
         return countryCodeMap.getOrDefault(countryCode, "Unknown");
     }
 
-    private String validatePhoneNumber(String phone, String countryCode) {
+    public String validatePhoneNumber(String phone, String countryCode) {
         String pattern = "";
         if (countryCode.equals("+237")) {
             pattern = CAMEROON_REGEX;
