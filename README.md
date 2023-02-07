@@ -8,6 +8,10 @@ This is a web project for categorizing and validating phone numbers. Phone numbe
 * Cd into the project directory.
 * Create the mysql database called phoneDb
 * Create the mysql table called customer with 3 filds id, name, phone
+* run insert scripts for the mobile numbers
+* run the spring boot application on your IDE or Through docker as follows:
+* 1. docker build -t phoneNumberValidator .
+* 2. docker run -p 8080:8081 phoneNumberValidator  
 ## Known Bugs
 At the moment there are no known bugs.
 ## Technologies Used
